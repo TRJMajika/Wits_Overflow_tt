@@ -10,8 +10,8 @@ jobs:
     steps: 
       - checkout
       - run: 
-          name: "Install npm modules in musician"
-          command: "cd musician; npm install; npm install jest; npm install --save jest-coverage-badges; sudo npm install -g codecov"
+          name: "Install npm modules"
+          command: "npm install; npm install jest; npm install --save jest-coverage-badges; sudo npm install -g codecov"
 
       - run: 
           name: "Run the jest tests"
