@@ -7,28 +7,26 @@ jobs:
     working directory: ~/public
     docker:
       - image: circleci/node:10.15.3
-      steps:
-        - checkout
-        - run:
-          name: update-npm
-          command: "sudo npm install -g npm@latest"
-        - restore-cache:
+    steps:
+      - checkout
+      - run:
+         name: update-npm
+         command: "sudo npm install -g npm@latest"
+      - restore-cache:
           key: dependence-cache-{{ checksum "package.json" }}
-        - run:
-            name: install-npm-wee
-            comand: npm install
-        - save_cache:
-            key: dependency-cache-{{ checksum "package.json" }}
-            paths:
-              - ./node_modules
-        - run:
-            name: test
-            command: npm test
-        - store_artifacts:
-            path: test-results.xml
-            prefix: tests
-        - store_artifacts:
-            path: coverage
-            prefix: coverage
-        - store_test_results:
-            path: test-results.xml
+      - run:
+          name: install-npm-wee
+          command: npm install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: test
+          command: npm test
+      - store_artifacts:
+          path: test-results.xml
+      - store_artifacts:
+          path: coverage
+      - store_test_results:
+          path: test-results.xml
