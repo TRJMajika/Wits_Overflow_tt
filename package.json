@@ -1,0 +1,22 @@
+{
+  "name": "wits_overflow_circle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Don-t-flutter-yourself/Wits_Overflow.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Don-t-flutter-yourself/Wits_Overflow/issues"
+  },
+  "homepage": "https://github.com/Don-t-flutter-yourself/Wits_Overflow#readme",
+  "devDependencies": {
+    "jest": "^28.1.3"
+  }
+}
