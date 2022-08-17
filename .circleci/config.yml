@@ -9,17 +9,18 @@ jobs:
     
     steps: 
       - checkout
+
+      - run: 
+          name: "update-npm"
+          command: "sudo npm install -g npm@latest"
+
       - run: 
           name: "Install npm modules"
-          command: "npm install; npm install jest; npm install --save jest-coverage-badges; sudo npm install -g codecov"
+          command: "npm install"
 
       - run: 
           name: "Run the jest tests"
           command: "npm test"
-      
-      - run:
-          name: "Generate badges from coverage-summary.json"
-          command: "npm run badges"
 
 
 workflows:
