@@ -20,12 +20,6 @@ class resetPassword extends Component{
         })
     }
 
-    // handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     //console.log(this.state);
-    //     this.props.signin(this.state);
-    // }
-
     render(){
         //const { authError } = this.props;
         return(
@@ -36,10 +30,6 @@ class resetPassword extends Component{
                     <label htmlFor="email">email:</label>
                     <input type="email" id="email" required onChange={this.handleChange}></input>
                     <button>enter</button> 
-                    {/* <a href='/signin' onClick={this.handleForgot}>Forgot Password</a> */}
-                    {/* <label>
-                    { authError ? <p>{ authError }</p> : null}    
-                    </label>               */}
             </form>
 
             </div>
@@ -56,7 +46,6 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return{ 
-        //signin: (creds) => dispatch(signin(creds)),
         forgotPassword: (creds) => dispatch(forgotPassword(creds))
     }
 
