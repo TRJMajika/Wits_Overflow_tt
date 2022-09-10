@@ -15,7 +15,7 @@
     "react-router-dom": "^6.3.0",
     "react-scripts": "^5.0.1",
     "web-vitals": "^2.1.4"
-    "test": "jest"
+    
   },
   "scripts": {
     "start": "react-scripts start",
@@ -48,4 +48,5 @@
     "source-map-loader": "^4.0.0",
     "webpack": "^5.74.0"
   }
+  
 }
