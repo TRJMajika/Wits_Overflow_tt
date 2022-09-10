@@ -1,15 +1,16 @@
 # WITS OVERFLOW APP
 
+
+This is a user interaction app for wits students to interact academically done as a project for final year commputer science group "Dont flutter Yourself".
+
+The project is a website built using react on VS-Code simple installation and running proceadure is below...
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
 [![CircleCI](https://circleci.com/gh/Don-t-flutter-yourself/Wits_Overflow.svg?style=svg&circle-token=<YOUR_STATUS_API_TOKEN>)](https://app.circleci.com/pipelines/github/Don-t-flutter-yourself/Wits_Overflow/40/workflows/fe7c7a89-829c-435e-bd91-a22828c77fe1/jobs/40)
 
 
-
-This is a user interaction app for wits students to interact academically done as a project for final year commputer science group "Dont flutter Yourself".
-
-The project is a website built using react on VS-Code simple installation and running proceadure is below...
 
 
 ## Getting Started with Create React App
