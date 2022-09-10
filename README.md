@@ -1,5 +1,6 @@
 # WITS OVERFLOW APP
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 This is a user interaction app for wits students to interact academically done as a project for final year commputer science group "Dont flutter Yourself".
 
