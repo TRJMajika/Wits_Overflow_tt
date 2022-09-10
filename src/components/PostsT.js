@@ -48,7 +48,7 @@ class PostsT extends Component{
         
 
         const ref = firebase.firestore().collection('UserPosts');
-        const{u_caption, u_question, u_id } = this.state
+        const{u_caption, u_question } = this.state
 
         function handleAddPost(datapoint){   //Where post is the entire object/datapoint
             ref.doc(datapoint.id)

@@ -33,7 +33,7 @@ function Navbar() {
         </li>
         <li className="nav__item">
           <a href="#" className="nav__link">
-            Login
+            Tags
             <Router>
             <Routes>
                     
@@ -45,7 +45,7 @@ function Navbar() {
         </li>
         <li className="nav__item">
           <a href="#" className="nav__link">
-            Signup
+            Questions
             <Router>
             <Routes>
                     <Route exact path="/signup"  component = {Signup} />
@@ -55,11 +55,15 @@ function Navbar() {
         </li>
         <li className="nav__item">
           <a href="#" className="nav__link">
-            Questions
+            Users
+          </a>
+        </li>
+        <li className="nav__item">
+          <a href="#" className="nav__link">
+          <div onClick={logoutUser}>Log out</div>
           </a>
         </li>
         
-        <div onClick={logoutUser}>Log out</div>
       </ul>
       
       <div onClick={navToggle} className={icon}>
