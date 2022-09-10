@@ -1,10 +1,10 @@
-### WITS OVERFLOW APP
+#WITS OVERFLOW APP
 This is a user interaction app for wits students to interact academically done as a project for final year commputer science group "Dont flutter Yourself".
 
 The project is a website built using react on VS-Code simple installation and running proceadure is below...
 
 
-# Getting Started with Create React App
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
