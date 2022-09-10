@@ -1,14 +1,30 @@
 import React from "react";
-import { useUserContext } from "../context/userContext";
+//import styled,{createGlobalStyle} from 'styled-components';
+//import { useUserContext } from "../context/userContext";
+import Navbar from "./navbar";
+import "../components/navbar.css";
+import Signin from "./signin";
+import Dashbody from "./dashbody";
+//import Signup from "./signup";
+
+import { BrowserRouter, Routes,Route} from "react-router-dom";
+//const GLobalStyles = createGlobalStyle
+
 
 const Dashboard = () => {
-  const { user, logoutUser } = useUserContext();
+  
   return (
     <div>
-      <h1>Dashboard </h1>
-      <h2>Name : {user.displayName}</h2>
-      <h2>Email : {user.email}</h2>
-      <button onClick={logoutUser}>Log out</button>
+     
+      <Navbar />
+      <Dashbody />
+      <BrowserRouter>
+      <Routes>
+        <Route path="/signin" exact component={Signin}/>
+      </Routes>
+      </BrowserRouter>
+      
+      
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
-import { forgotPassword } from "../authActions";
+import { forgotPassword } from "../authentication/authActions";
 
 class resetPassword extends Component{
     state = {
