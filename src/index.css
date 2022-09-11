@@ -13,7 +13,7 @@ body {
       monospace;
   }
   
-  .App {
+  .Dashboard {
     display: flex;
     align-items: center;
     justify-content: center;

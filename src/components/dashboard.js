@@ -3,11 +3,11 @@ import React from "react";
 //import { useUserContext } from "../context/userContext";
 import Navbar from "./navbar";
 import "../components/navbar.css";
-import Signin from "./signin";
+//mport Signin from "./signin";
 import Dashbody from "./dashbody";
 //import Signup from "./signup";
 
-import { BrowserRouter, Routes,Route} from "react-router-dom";
+//import { BrowserRouter, Routes,Route} from "react-router-dom";
 //const GLobalStyles = createGlobalStyle
 
 
@@ -18,11 +18,7 @@ const Dashboard = () => {
      
       <Navbar />
       <Dashbody />
-      <BrowserRouter>
-      <Routes>
-        <Route path="/signin" exact component={Signin}/>
-      </Routes>
-      </BrowserRouter>
+      
       
       
     </div>
