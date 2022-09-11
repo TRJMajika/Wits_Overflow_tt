@@ -3,9 +3,9 @@
 import React from "react";
 import moment from "moment";
 
-import './userContent.styles.scss';
+import "./userContent.css";
 
-const userContent = ({ username, answers_count, posts_count, comments_count, tags_count, created_at }) => (
+const UserContent = ({ username, answers_count, posts_count, comments_count, tags_count, created_at }) => (
   <div className='content-card'>
     <div className='content-grid'>
       <div className='info-cell'>
@@ -63,4 +63,4 @@ const userContent = ({ username, answers_count, posts_count, comments_count, tag
   </div>
 )
 
-export default userContent;
+export default UserContent;

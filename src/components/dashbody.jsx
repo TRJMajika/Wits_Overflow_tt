@@ -1,17 +1,28 @@
 import React from "react";
+import UserAvatar from "./dashbody/userAvatar/userAvatar";
+import './dashbody.css';
+import UserContent from "./dashbody/userContent/userContent";
 import { useUserContext } from "../context/userContext";
+
 
 const Dashbody = () => {
   const { user} = useUserContext();
   return (
-    <div>
-      <h1>finishing  </h1>
-      <h2>Name : {user.displayName}</h2>
-      <h2>Email : {user.email}</h2>
-      <h1>Questions asked </h1>
-      <h1>Answers given </h1>
-      <h1>Time Spent  </h1>
-    </div>
+    <div className='grid'>
+<UserAvatar
+ // id={user.id}
+  //gravatar={user.gravatar}
+  //views={user.views}
+/>
+<UserContent
+ displayName={user.displayName}
+  //answers_count={user.answers_count}
+  //posts_count={user.posts_count}
+  //comments_count={user.comments_count}
+  //tags_count={user.tags_count}
+  //created_at={user.created_at}
+/>
+</div>
   );
 };
 

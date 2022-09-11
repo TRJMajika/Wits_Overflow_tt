@@ -4,7 +4,7 @@ import { useUserContext } from "../context/userContext";
 const Signin = () => {
   const emailRef = useRef();
   const passwordRef = useRef();
-  const { signInUser} = useUserContext();
+  const { signInUser,forgotPassword } = useUserContext();
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -13,15 +13,15 @@ const Signin = () => {
     if (email && password) signInUser(email, password);
   };
 
-  /*
-  <p onClick={forgotPasswordHandler}>Forgot Password?</p>
+  
   const forgotPasswordHandler = () => {
     const email = emailRef.current.value;
     if (email)
       forgotPassword(email).then(() => {
         emailRef.current.value = "";
       });
-  };*/
+  };
+
 
   return (
     <div className="form">
@@ -30,7 +30,7 @@ const Signin = () => {
         <input placeholder="Email" type="email" required ref={emailRef} />
         <input placeholder="Password" type="password" required ref={passwordRef} />
         <button type="submit">Sign In</button>
-        
+        <p onClick={forgotPasswordHandler}>Forgot Password?</p>
       </form>
     </div>
   );
