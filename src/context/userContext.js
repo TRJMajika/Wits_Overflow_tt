@@ -56,6 +56,14 @@ export const UserContextProvider = ({ children }) => {
     return sendPasswordResetEmail(auth, email);
     sendPasswordResetEmail,
   };*/
+  
+  const forgotPassword = (email) => {
+    setLoading(true);
+    sendPasswordResetEmail(auth, email)
+      .then((res) => console.log(res))
+      .catch((err) => setError(err.code))
+      .finally(() => setLoading(false));
+  }
 
   const contextValue = {
     user,
@@ -64,7 +72,7 @@ export const UserContextProvider = ({ children }) => {
     signInUser,
     registerUser,
     logoutUser,
-    
+    forgotPassword
   };
   return (
     <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>
