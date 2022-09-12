@@ -1,8 +1,7 @@
 
-//comment: off
+# Global YAML [lower on hierarchy]
 coverage:
-  status:
-    project:
-      default:
-        threshold: 5%
-    patch: off
+  round: down
+  precision: 5
+
+
