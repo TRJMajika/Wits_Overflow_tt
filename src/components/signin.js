@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { useUserContext } from "../context/userContext";
+//import Popup from 'reactjs-popup';
 
 const Signin = () => {
   const emailRef = useRef();
@@ -14,13 +15,22 @@ const Signin = () => {
   };
 
   
-  const forgotPasswordHandler = () => {
+  //const forgotPasswordHandler = () => {
+  //  const email = emailRef.current.value;
+  //  if (email)
+  //    forgotPassword(email).then(() => {
+  //      emailRef.current.value = "";
+  //    });
+  //};
+  
+  const resetHandler = () => {
     const email = emailRef.current.value;
-    if (email)
-      forgotPassword(email).then(() => {
-        emailRef.current.value = "";
-      });
-  };
+    if (email) forgotPassword(email).then(() => {
+      emailRef.current.value = ""; 
+      //return true;
+    })
+    //if (!email) return false;
+  }
 
 
   return (
@@ -30,7 +40,11 @@ const Signin = () => {
         <input placeholder="Email" type="email" required ref={emailRef} />
         <input placeholder="Password" type="password" required ref={passwordRef} />
         <button type="submit">Sign In</button>
-        <p onClick={forgotPasswordHandler}>Forgot Password?</p>
+        {/*<p onClick={forgotPasswordHandler}>Forgot Password?</p>*/}
+        <p onClick={resetHandler}>Forgot Password ?</p>
+        {/* <Popup trigger={!resetHandler}>
+          <div style={{color:'red', width:'100%', position:'fixed', left:'45%', top:'70%'}}>email required</div>
+        </Popup> */}
       </form>
     </div>
   );
