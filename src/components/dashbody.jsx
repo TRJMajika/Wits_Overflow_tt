@@ -1,29 +1,77 @@
 import React from "react";
-import UserAvatar from "./dashbody/userAvatar/userAvatar";
-import './dashbody.css';
-import UserContent from "./dashbody/userContent/userContent";
-import { useUserContext } from "../context/userContext";
-
-
-const Dashbody = () => {
-  const { user} = useUserContext();
+import styled from "styled-components";
+import image from "./assets/profile.jpeg";
+import { HiOutlineLocationMarker } from "react-icons/hi";
+import { cardStyles } from "./dashbody/ReusableStyles";
+export default function Profile() {
   return (
-    <div className='grid'>
-<UserAvatar
- // id={user.id}
-  //gravatar={user.gravatar}
-  //views={user.views}
-/>
-<UserContent
- displayName={user.displayName}
-  //answers_count={user.answers_count}
-  //posts_count={user.posts_count}
-  //comments_count={user.comments_count}
-  //tags_count={user.tags_count}
-  //created_at={user.created_at}
-/>
-</div>
+    <Section>
+      <div className="image">
+        <img src={image} alt="" />
+      </div>
+      <div className="title">
+        <h2>Kishan Sheth</h2>
+        <h5>
+          <HiOutlineLocationMarker /> New York, USA
+        </h5>
+      </div>
+      <div className="info">
+        <div className="container">
+          <h5>Days at work</h5>
+          <h3>28</h3>
+        </div>
+        <div className="container">
+          <h5>Rides</h5>
+          <h3>427</h3>
+        </div>
+        <div className="container">
+          <h5>Hours</h5>
+          <h3>76</h3>
+        </div>
+      </div>
+    </Section>
   );
-};
-
-export default Dashbody;
+}
+const Section = styled.section`
+  ${cardStyles};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  .image {
+    max-height: 10rem;
+    overflow: hidden;
+    border-radius: 20rem;
+    img {
+      height: 10rem;
+      width: 10rem;
+      object-fit: cover;
+      border-radius: 20rem;
+      transition: 0.5s ease-in-out;
+    }
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+  .title {
+    text-align: center;
+    h2,
+    h5 {
+      color: #ffc107;
+      font-family: "Permanent Marker", cursive;
+      letter-spacing: 0.3rem;
+    }
+    h5 {
+      letter-spacing: 0.2rem;
+    }
+  }
+  .info {
+    display: flex;
+    gap: 1rem;
+    .container {
+      text-align: center;
+    }
+  }
+`;
