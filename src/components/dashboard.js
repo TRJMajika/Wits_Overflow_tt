@@ -4,7 +4,7 @@ import React from "react";
 import Navbar from "./navbar";
 import "../components/navbar.css";
 //mport Signin from "./signin";
-import Dashbody from "./dashbody";
+//import Dashbody from "./dashbody";
 //import Signup from "./signup";
 
 //import { BrowserRouter, Routes,Route} from "react-router-dom";
@@ -17,7 +17,7 @@ const Dashboard = () => {
     <div>
      
       <Navbar />
-      <Dashbody />
+     
       
       
       
