@@ -20,7 +20,7 @@ function App() {
        {/* Thabelo: */}
       <Router>
       <Routes>
-        <Route path="/posts" element={<PostsT/>}/>
+        <Route path="/createposts" element={<PostsT/>}/>
         <Route path="/allposts" element={<AllPostsT/>}/>
         <Route path="/dashboard" element={<Dashboard/>}/>
       </Routes>
