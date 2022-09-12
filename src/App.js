@@ -6,6 +6,7 @@ import "./index.css";
 ///////Thabelo:
 import PostsT from "./components/PostsT";
 import AllPostsT  from "./components/AllPostsT";
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom" ;
 ///////Thabelo:
 
 function App() {
