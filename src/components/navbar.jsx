@@ -27,25 +27,18 @@ function Navbar() {
       </a>
       <ul className={active}>
         <li className="nav__item">
-          <a href="/allposts" className="nav__link">    
-            Home
+          <a href="/dashboard" className="nav__link">    
+            Dashboard
           </a>
         </li>
         <li className="nav__item">
-          <a href="#" className="nav__link">
-            Tags
-            <Router>
-            <Routes>
-                    
-             <Route path="/signin" exact component={Signin}/>
-            </Routes>
-            </Router>
-            
+          <a href="/createposts" className="nav__link">
+            Create Post
           </a>
         </li>
         <li className="nav__item">
           <a href="/posts" className="nav__link">
-            Questions
+            Posts
           </a>
         </li>
         <li className="nav__item">
