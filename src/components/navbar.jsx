@@ -46,11 +46,6 @@ function Navbar() {
         <li className="nav__item">
           <a href="/posts" className="nav__link">
             Questions
-//             <Router>
-//             <Routes>
-//                     <Route exact path="/signup"  component = {Signup} />
-//             </Routes>
-//             </Router>
           </a>
         </li>
         <li className="nav__item">
