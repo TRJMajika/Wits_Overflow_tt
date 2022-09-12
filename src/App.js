@@ -3,7 +3,7 @@ import Dashboard from "./components/dashboard";
 import { useUserContext } from "./context/userContext";
 import "./index.css";
 
-///////Thabelo:
+///////Thabelo: These are the imports necessary for changing pages using urls/routing. Also going to be used to link to the Navigation Bar.
 import PostsT from "./components/PostsT";
 import AllPostsT  from "./components/AllPostsT";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom" ;
@@ -17,7 +17,7 @@ function App() {
       {error && <p className="error">{error}</p>}
       {loading ? <h2>Loading...</h2> : <> {user ? <Dashboard /> : <Auth />} </>}
        
-       {/* Thabelo: */}
+       {/* Thabelo: This is the routing process */}
       <Router>
       <Routes>
         <Route path="/createposts" element={<PostsT/>}/>
