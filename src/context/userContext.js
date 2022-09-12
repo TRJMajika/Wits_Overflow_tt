@@ -52,11 +52,8 @@ export const UserContextProvider = ({ children }) => {
     signOut(auth);
   };
 
-  /*const forgotPassword = (email) => {
-    return sendPasswordResetEmail(auth, email);
-    sendPasswordResetEmail,
-  };*/
   
+  //password reset authentication
   const forgotPassword = (email) => {
     setLoading(true);
     sendPasswordResetEmail(auth, email)
