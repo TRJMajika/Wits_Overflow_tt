@@ -61,7 +61,7 @@ class PostsT extends Component{
                 <div>
                    <div>
                      <h5><label>Caption : </label> </h5>
-                     <input type="text" value={u_caption} onChange={this.handlerChangeCaption}></input>
+                     <textarea value={u_caption} onChange={this.handlerChangeCaption}></textarea>
                    </div>
 
                    <div>
