@@ -27,7 +27,7 @@ function Navbar() {
       </a>
       <ul className={active}>
         <li className="nav__item">
-          <a href="#" className="nav__link">
+          <a href="/allposts" className="nav__link">    
             Home
           </a>
         </li>
@@ -44,13 +44,13 @@ function Navbar() {
           </a>
         </li>
         <li className="nav__item">
-          <a href="#" className="nav__link">
+          <a href="/posts" className="nav__link">
             Questions
-            <Router>
-            <Routes>
-                    <Route exact path="/signup"  component = {Signup} />
-            </Routes>
-            </Router>
+//             <Router>
+//             <Routes>
+//                     <Route exact path="/signup"  component = {Signup} />
+//             </Routes>
+//             </Router>
           </a>
         </li>
         <li className="nav__item">
