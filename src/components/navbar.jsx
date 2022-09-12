@@ -54,7 +54,7 @@ function Navbar() {
           </a>
         </li>
         <li className="nav__item">
-          <a href="#" className="nav__link">
+          <a href="/" className="nav__link">
           <div onClick={logoutUser}>Log out</div>
           </a>
         </li>
