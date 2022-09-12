@@ -21,7 +21,7 @@ function App() {
       <Router>
       <Routes>
         <Route path="/createposts" element={<PostsT/>}/>
-        <Route path="/allposts" element={<AllPostsT/>}/>
+        <Route path="/posts" element={<AllPostsT/>}/>
         <Route path="/dashboard" element={<Dashboard/>}/>
       </Routes>
       </Router>
