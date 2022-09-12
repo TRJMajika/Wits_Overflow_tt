@@ -15,14 +15,7 @@ const Signin = () => {
   };
 
   
-  //const forgotPasswordHandler = () => {
-  //  const email = emailRef.current.value;
-  //  if (email)
-  //    forgotPassword(email).then(() => {
-  //      emailRef.current.value = "";
-  //    });
-  //};
-  
+  //on click handler, calls reset password auth, and passes email as parameter
   const resetHandler = () => {
     const email = emailRef.current.value;
     if (email) forgotPassword(email).then(() => {
@@ -40,11 +33,10 @@ const Signin = () => {
         <input placeholder="Email" type="email" required ref={emailRef} />
         <input placeholder="Password" type="password" required ref={passwordRef} />
         <button type="submit">Sign In</button>
-        {/*<p onClick={forgotPasswordHandler}>Forgot Password?</p>*/}
         <p onClick={resetHandler}>Forgot Password ?</p>
         {/* <Popup trigger={!resetHandler}>
           <div style={{color:'red', width:'100%', position:'fixed', left:'45%', top:'70%'}}>email required</div>
-        </Popup> */}
+        </Popup> */}  //pops up error if email field is empty
       </form>
     </div>
   );
