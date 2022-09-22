@@ -25,7 +25,7 @@ export const UserContextProvider = ({ children }) => {
       setLoading(false);
     });
     return unsubscribe;
-  }, []);
+  }, []);  
 
   const registerUser = (email, password, username) => {
     setLoading(true);
