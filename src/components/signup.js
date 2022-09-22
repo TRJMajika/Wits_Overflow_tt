@@ -2,10 +2,10 @@ import React, { useRef } from "react";
 import { useUserContext } from "../context/userContext";
 
 const Signup = () => {
-  const firstnameRef = useRef();
-  const lastnameRef = useRef();
+  // const firstnameRef = useRef();
+  // const lastnameRef = useRef();
   const studentNumRef = useRef();
-  const facultyRef = useRef();
+  // const facultyRef = useRef();
   const emailRef = useRef();
   const usernameRef = useRef();
   const passwordRef = useRef();
