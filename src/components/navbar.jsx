@@ -32,6 +32,11 @@ function Navbar() {
           </a>
         </li>
         <li className="nav__item">
+          <a href="/profile" className="nav__link">    
+            Profile
+          </a>
+        </li>
+        <li className="nav__item">
           <a href="/createposts" className="nav__link">
             Create Post
           </a>
@@ -41,11 +46,11 @@ function Navbar() {
             Posts
           </a>
         </li>
-        <li className="nav__item">
+        {/* <li className="nav__item">
           <a href="#" className="nav__link">
             Users
           </a>
-        </li>
+        </li> */}
         <li className="nav__item">
           <a href="/" className="nav__link">
           <div onClick={logoutUser}>Log out</div>
