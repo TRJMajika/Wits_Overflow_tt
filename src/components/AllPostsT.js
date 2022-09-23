@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 import firebase from '../firebase/index' 
-import {Container} from '@material-ui/core'
+//import {Container} from '@material-ui/core'
 
 
 function AllPostsT() {
@@ -27,12 +27,12 @@ function AllPostsT() {
              
             {posts.map((post) => (
                 <div key= {post.u_id}> 
-                <Container maxWidth="lg" style={{backgroundColor:"whitesmoke"}}>
+                {/* <Container maxWidth="lg" style={{backgroundColor:"whitesmoke"}}> */}
                     <h5>Caption :  {post.u_caption}</h5>
                     <h5>Question - </h5>
                     <p> {post.u_question}</p>
                     <button type="details" variant="contained" color="primary">View in detail</button>
-                </Container>
+                {/* </Container> */}
                 </div>
             ))}
        
