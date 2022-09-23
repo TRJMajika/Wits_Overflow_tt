@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 import firebase from '../firebase/index' 
-//import {Container} from '@material-ui/core'
+//import {Container} from '@material-ui/core';
 
 
 function AllPostsT() {
