@@ -34,7 +34,7 @@ const Signin = () => {
         <input placeholder="Password" type="password" required ref={passwordRef} />
         <button type="submit">Sign In</button>
         <p onClick={resetHandler}>Forgot Password ?</p>
-        {/* <Popup trigger={!resetHandler}>
+        {/* <Pop trigger={!resetHandler}>
           <div style={{color:'red', width:'100%', position:'fixed', left:'45%', top:'70%'}}>email required</div>
         </Popup> //pops up error if email field is empty*/}  
       </form>
