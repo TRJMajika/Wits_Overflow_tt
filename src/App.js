@@ -1,7 +1,6 @@
 import Auth from "./components/auth";
 import Dashboard from "./components/dashboard";
 import { useUserContext } from "./context/userContext";
-import Profile from "./components/profile";
 import "./index.css";
 
 ///////Thabelo: These are the imports necessary for changing pages using urls/routing. Also going to be used to link to the Navigation Bar.
@@ -24,7 +23,6 @@ function App() {
         <Route path="/createposts" element={<PostsT/>}/>
         <Route path="/posts" element={<AllPostsT/>}/>
         <Route path="/dashboard" element={<Dashboard/>}/>
-        <Route path="/profile" element={<Profile/>}/>
       </Routes>
       </Router>
     {/* Thabelo */}
