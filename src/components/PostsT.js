@@ -19,16 +19,16 @@ function PostsT(){
     const [u_question, setQuestion] = useState('') ;
     const [u_email, setEmail] = useState('') ;
     const [u_username, setUsername] = useState('') ;
+    const [u_id, setId] = useState('') ;
 
     ///Left with the time and date at which the post is created
 
     useEffect(() => {
         onAuthStateChanged(auth, (user)=>{
             if(user){
-                ///Yes you are logged in
+               setId(user.uid) ; 
                setEmail(user.email) ;
                setUsername(user.displayName) ;
-                console.log('Hello', u_email , u_username) ;
             }
         })
 
@@ -52,7 +52,7 @@ function PostsT(){
           <textarea placeholder="Question" type="question" onChange={(event) => setQuestion(event.target.value)} />
         </div>
        
-        <button type="submit" onClick={() => handleAddPost({u_caption, u_question,u_username, u_email, u_id: uuidv4()})}>Post</button>
+        <button type="submit" onClick={() => handleAddPost({u_caption, u_question,u_username, u_email, u_id})}>Post</button>
 
     </div>)
 }
