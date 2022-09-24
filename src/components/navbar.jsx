@@ -46,11 +46,11 @@ function Navbar() {
             Posts
           </a>
         </li>
-        {/* <li className="nav__item">
-          <a href="#" className="nav__link">
+         <li className="nav__item">
+          <a href="/allusers" className="nav__link">
             Users
           </a>
-        </li> */}
+        </li>
         <li className="nav__item">
           <a href="/" className="nav__link">
           <div onClick={logoutUser}>Log out</div>
