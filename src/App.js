@@ -8,6 +8,7 @@ import "./index.css";
 import PostsT from "./components/PostsT";
 import AllPostsT  from "./components/AllPostsT";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom" ;
+import UsersT from "./components/UsersT";
 ///////Thabelo:
 
 function App() {
@@ -25,6 +26,8 @@ function App() {
         <Route path="/posts" element={<AllPostsT/>}/>
         <Route path="/dashboard" element={<Dashboard/>}/>
         <Route path="/profile" element={<Profile/>}></Route>
+       
+       <Route path="/allusers" element={<UsersT/>}/>
       </Routes>
       </Router>
     {/* Thabelo */}
