@@ -8,7 +8,7 @@ import firebase from '../firebase/index' ;
 import Signup from './signup';
 
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import {getAuth , onAuthStateChanged} from "firebase/auth" ;
 import { app } from '../firebase/index' ;
 
