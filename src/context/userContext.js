@@ -49,7 +49,10 @@ export const UserContextProvider = ({ children }) => {
   };
 
   const logoutUser = () => {
-    signOut(auth);
+    setLoading(true);
+    signOut(auth)
+    .then((res) => console.log(res))
+    .finally(() => setLoading(false));
   };
 
   
