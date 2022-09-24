@@ -1,90 +1,139 @@
 
-/////Thabelo :
+/////Thabelo : Had to change class components to function component so I could make use of Hooks
 
 import React, {Component} from 'react' ;
 import { v4  as uuidv4 } from 'uuid' ;
 import firebase from '../firebase/index' ;
 
+import Signup from './signup';
 
 
-class PostsT extends Component{
-    constructor(props){
-        super(props)
-        this.state = {
-            u_caption: '',
-            u_question: '',
-            u_id: '',
+import { useEffect } from 'react';
+import {getAuth , onAuthStateChanged} from "firebase/auth" ;
+import { app } from '../firebase/index' ;
+
+const auth = getAuth(app) ;
+
+function PostsT(){
+    const [u_caption, setCaption] = useState('') ;
+    const [u_question, setQuestion] = useState('') ;
+    const [u_email, setEmail] = useState('') ;
+    const [u_username, setUsername] = useState('') ;
+
+    ///Left with the time and date at which the post is created
+
+    useEffect(() => {
+        onAuthStateChanged(auth, (user)=>{
+            if(user){
+                ///Yes you are logged in
+               setEmail(user.email) ;
+               setUsername(user.displayName) ;
+                console.log('Hello', u_email , u_username) ;
+            }
+        })
+
+    }, [])
+
+    const ref = firebase.firestore().collection('UserPosts');
+ 
+    function handleAddPost(datapoint){   //Where post is the entire object/datapoint
+        ref.doc(datapoint.id)
+        ref.add(datapoint)
+        alert("Question Posted.")
+    }
+
+  
+    return(
+    <div>
+        <div>
+          <textarea placeholder="Caption" type="caption"  onChange={(event) => setCaption(event.target.value)} />
+        </div>
+        <div>
+          <textarea placeholder="Question" type="question" onChange={(event) => setQuestion(event.target.value)} />
+        </div>
+       
+        <button type="submit" onClick={() => handleAddPost({u_caption, u_question,u_username, u_email, u_id: uuidv4()})}>Post</button>
+
+    </div>)
+}
+
+export default PostsT ;
+
+
+// class PostsT extends Component{
+//     constructor(props){
+//         super(props)
+//         this.state = {
+//             u_caption: '',
+//             u_question: '',
+//             u_id: '',
           
-        }
+//         }
 
 
-        this.handlerChangeCaption = this.handlerChangeCaption.bind(this) ;
-        this.handlerChangeQuestion = this.handlerChangeQuestion.bind(this) ;
+//         this.handlerChangeCaption = this.handlerChangeCaption.bind(this) ;
+//         this.handlerChangeQuestion = this.handlerChangeQuestion.bind(this) ;
       
 
-    }
+//     }
 
     
 
-    handlerChangeCaption(event){
-        this.setState({
-            u_caption: event.target.value
-        })
-    }
+//     handlerChangeCaption(event){
+//         this.setState({
+//             u_caption: event.target.value
+//         })
+//     }
 
-    handlerChangeQuestion(event){
-        this.setState({
-            u_question: event.target.value
-        })
-    }
+//     handlerChangeQuestion(event){
+//         this.setState({
+//             u_question: event.target.value
+//         })
+//     }
 
-    //State of Student number will be retrieved from from Users Table?????
+//     //State of Student number will be retrieved from from Users Table?????
 
     
   
 
 
-    render(){
+//     render(){
         
 
-        const ref = firebase.firestore().collection('UserPosts');
-        const{u_caption, u_question } = this.state
+//         const ref = firebase.firestore().collection('UserPosts');
+//         const{u_caption, u_question } = this.state
 
-        function handleAddPost(datapoint){   //Where post is the entire object/datapoint
-            ref.doc(datapoint.id)
-            ref.add(datapoint)
-            alert("Question Posted.")
-        }
+//         function handleAddPost(datapoint){   //Where post is the entire object/datapoint
+//             ref.doc(datapoint.id)
+//             ref.add(datapoint)
+//             alert("Question Posted.")
+//         }
 
 
-        return(
-                <div>
-                   <div>
-                     <h5><label>Caption : </label> </h5>
-                     <textarea value={u_caption} onChange={this.handlerChangeCaption}></textarea>
-                   </div>
+//         return(
+//                 <div>
+//                    <div>
+//                      <h5><label>Caption : </label> </h5>
+//                      <textarea value={u_caption} onChange={this.handlerChangeCaption}></textarea>
+//                    </div>
 
-                   <div>
-                     <h5><label>Question : </label></h5>
-                    <textarea value={u_question} onChange={this.handlerChangeQuestion}></textarea>
-                   </div>
+//                    <div>
+//                      <h5><label>Question : </label></h5>
+//                     <textarea value={u_question} onChange={this.handlerChangeQuestion}></textarea>
+//                    </div>
 
-                   <div>
-                     <button type="post" variant="contained" color="primary" onClick={() => handleAddPost({u_caption, u_question, u_id: uuidv4()})}>Post </button>
-                   </div>
+//                    <div>
+//                      <button type="post" variant="contained" color="primary" onClick={() => handleAddPost({u_caption, u_question, u_id: uuidv4()})}>Post </button>
+//                    </div>
                      
-                    
-                
-                        
-            
                    
-                </div>
+//                 </div>
       
-        )
-    }
-}
+//         )
+//     }
+// }
 
-export default PostsT ;
+// export default PostsT ;
 
 
 /////////Thabelo :
