@@ -1,6 +1,35 @@
 import "./profile.css";
 
-const profile = () => {
+/////////Thabelo:
+import React, {Component} from "react";
+import firebase from "../firebase/index";
+import { UserContext } from "../context/userContext";
+
+
+import { useEffect, useState } from 'react';
+import {getAuth , onAuthStateChanged} from "firebase/auth" ;
+import { app } from '../firebase/index' ;
+//////////Thabelo:
+
+const Profile = () => {
+///////////Thabelo:
+    const [u_username, setUsername] = useState('') ;
+    const [u_id, setId] = useState('') ;
+    const [u_email, setEmail] = useState('') ;
+
+    
+    useEffect(() => {
+        onAuthStateChanged(auth, (user)=>{
+            if(user){
+               setId(user.uid)
+               setEmail(user.email) ;
+               setUsername(user.displayName) ;
+            }
+        })
+
+ },[]);
+    
+ /////////Thabelo:
     return ( 
         <div className="profile">
             <div className="upper-container">
@@ -12,13 +41,13 @@ const profile = () => {
                 {/* <h3> { username } : { stuNo }</h3>
                 <h4> { email } </h4>
                 <h5> { } </h5> */}
-                <h3> Username : Student No. </h3>
-                <h4> Email Address </h4>
-                <h4> About </h4>
+                <h3> Username: {u_username}  </h3>
+                <h4> Email Address: {u_email} </h4>
+                <h4> About: {u_id} </h4>
                 <button> back </button>
             </div>
         </div>
     );
 }
  
-export default profile;
+export default Profile;
