@@ -14,7 +14,7 @@ const profile = () => {
                 <h5> { } </h5> */}
                 <h3> Tshepang : 2327793</h3>
                 <h4> labs6068@gmail.com </h4>
-                <h5> Computer Science </h5>
+                <h4> Computer Science </h4>
                 <button> back </button>
             </div>
         </div>

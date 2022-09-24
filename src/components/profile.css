@@ -28,7 +28,7 @@ img{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
 }
-.lower-container h3,h4,h5{
+.lower-container h3,h4{
     margin: 0;
     padding: 0;
 }
@@ -37,7 +37,7 @@ img{
     font-weight: 600;
     font-size: 1.5rem;
 }
-.lower-container h4,h5{
+.lower-container h4{
     color: olive;
     font-weight: 700;
     font-size: 1.2rem;

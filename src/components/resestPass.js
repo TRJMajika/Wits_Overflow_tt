@@ -16,7 +16,6 @@ const Reset = () => {
           <form onSubmit={onSubmit}>
             <input placeholder="Email" type="email" required ref={emailRef} />
             <button type="submit">send</button>
-            
           </form>
         </div>
     );
