@@ -12,9 +12,9 @@ const profile = () => {
                 {/* <h3> { username } : { stuNo }</h3>
                 <h4> { email } </h4>
                 <h5> { } </h5> */}
-                <h3> Tshepang : 2327793</h3>
-                <h4> labs6068@gmail.com </h4>
-                <h4> Computer Science </h4>
+                <h3> Username : Student No. </h3>
+                <h4> Email Address </h4>
+                <h4> About </h4>
                 <button> back </button>
             </div>
         </div>
