@@ -1,5 +1,6 @@
 import Auth from "./components/auth";
 import Dashboard from "./components/dashboard";
+import Profile from "./components/profile";
 import { useUserContext } from "./context/userContext";
 import "./index.css";
 
@@ -23,6 +24,7 @@ function App() {
         <Route path="/createposts" element={<PostsT/>}/>
         <Route path="/posts" element={<AllPostsT/>}/>
         <Route path="/dashboard" element={<Dashboard/>}/>
+        <Route path="/profile" element={<Profile/>}></Route>
       </Routes>
       </Router>
     {/* Thabelo */}

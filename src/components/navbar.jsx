@@ -1,10 +1,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import {  BrowserRouter as Router, Routes, Route } from "react-router-dom";
+//import {  BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useUserContext } from "../context/userContext";
 import React, { useState } from "react";
 import "../components/navbar.css";
-import Signin from "./signin";
-import Signup from "./signup";
+//import Signin from "./signin";
+//import Signup from "./signup";
 
 function Navbar() {
   const { logoutUser } = useUserContext();
