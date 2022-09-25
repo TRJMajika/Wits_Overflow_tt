@@ -1,9 +1,8 @@
 import "./profile.css";
+import { useNavigate } from "react-router-dom";
 
 /////////Thabelo:
-import React, {Component} from "react";
-import firebase from "../firebase/index";
-import { UserContext } from "../context/userContext";
+import React from "react";
 
 
 import { useEffect, useState } from 'react';
@@ -33,6 +32,12 @@ const Profile = () => {
  },[]);
     
  /////////Thabelo:
+
+    const nav = useNavigate();
+    const handleBack = () => {
+        nav(-1);
+    }
+
     return ( 
         <div className="profile">
             <div className="upper-container">
@@ -47,7 +52,7 @@ const Profile = () => {
                 <h3> Username: {u_username}  </h3>
                 <h4> Email Address: {u_email} </h4>
                 <h4> About: {u_id} </h4>
-                <button> back </button>
+                <button onClick={handleBack}> back </button>
             </div>
         </div>
     );

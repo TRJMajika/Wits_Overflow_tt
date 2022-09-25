@@ -6,7 +6,7 @@ import { UserContext } from "../context/userContext";
 import { useEffect, useState } from 'react';
 import {getAuth , onAuthStateChanged} from "firebase/auth" ;
 import { app } from '../firebase/index' ;
-import {Container} from '@material-ui/core';
+//import {Container} from '@material-ui/core';
 
 const auth = getAuth(app) ;
 
@@ -56,13 +56,13 @@ function MyPostsT(){
             {myposts.map((mypost) => (
                 <>
                 <div key= {mypost.u_id}> 
-                <Container maxWidth="lg" style={{backgroundColor:"whitesmoke"}}>
+                {/* <Container maxWidth="lg" style={{backgroundColor:"whitesmoke"}}> */}
                     <h5>Username :  {mypost.u_username}</h5>
                     <h5>Email :  {mypost.u_email}</h5>
                     <h5>Caption :  {mypost.u_caption}</h5>
                     <h5>Question : <p> {mypost.u_question}</p> </h5>
                  
-                 </Container>
+                 {/* </Container> */}
                 </div>
                 <div>
                 <p>    ===========================================================================================================================</p>

@@ -1,7 +1,7 @@
 ////////Thabelo:
 import React, { useState, useEffect } from 'react'
 import firebase from '../firebase/index' 
-import {Container} from '@material-ui/core'
+//import {Container} from '@material-ui/core'
 
 function UsersT(){
     const [allUsers, setUsers] = useState([]) ;
@@ -24,11 +24,11 @@ function UsersT(){
               {allUsers.map((user) => (
                 <>
                 <div key= {user.studentNumRef}> 
-                <Container maxWidth="lg" style={{backgroundColor:"whitesmoke"}}>
+                {/* <Container maxWidth="lg" style={{backgroundColor:"whitesmoke"}}> */}
                     <h3 style={{color:"blue"}}>Name :  {user.firstnameRef}</h3>
                     <h3 style={{color:"blue"}}> Lastname: {user.lastnameRef} </h3>
                     <h3 style={{color:"blue"}}>Student Number: {user.studentNumRef}</h3>   
-                </Container>
+                {/* </Container> */}
                 </div>
                 <div>
                     <p>    ===========================================================================================================================</p>

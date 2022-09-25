@@ -1,5 +1,7 @@
-import React, { useRef } from "react";
+//import React, { useRef } from "react";
+import React from "react";
 import { useUserContext } from "../context/userContext";
+// import { useNavigate } from "react-router-dom";
 
 ///////////Thabelo and Bongiwe:
 import { useState } from "react";
@@ -38,14 +40,18 @@ const Signup = () => {
 
   const ref = firebase.firestore().collection('Users');
 
+  // const nav = useNavigate();
+
   function handleSubmit(datapoint){
-    if (emailRef && passwordRef && usernameRef){
+    if (emailRef && passwordRef && usernameRef && passwordRef === confirmPassRef){
 
       registerUser(emailRef, passwordRef, usernameRef);
 
       ref.doc(datapoint.id)
       ref.add(datapoint)
       alert("Registered.")
+
+      // nav('/dashboard');
 
     } 
   
@@ -65,6 +71,7 @@ const Signup = () => {
       <input placeholder="Password" type="password"  onChange={(event) => setPassword(event.target.value)} />
       <input placeholder="Confirm Password" type="password" onChange={(event) => setConfirmPassword(event.target.value)} />
       <button type="submit" onClick={() => handleSubmit({firstnameRef, lastnameRef, studentNumRef, emailRef, usernameRef, passwordRef,  u_id: uuidv4()})}>Register</button>
+      {/* <a href="/">Already have an account?</a> */}
     </form>
   </div>
 );

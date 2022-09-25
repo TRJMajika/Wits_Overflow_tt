@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import firebase from '../firebase/index' 
 //import {Container} from '@material-ui/core';
+import { useNavigate } from "react-router-dom";
 
 
 function AllPostsT() {
@@ -10,9 +11,7 @@ function AllPostsT() {
 
     const ref = firebase.firestore().collection("UserPosts");
 
-    const handleView = () => {
-        
-    }
+    const nav = useNavigate();
 
     function AllPosts(){
         ref.onSnapshot((querySnapshot) => { 
@@ -35,7 +34,9 @@ function AllPostsT() {
                     <h5>Caption :  {post.u_caption}</h5>
                     <h5>Question - </h5>
                     <p> {post.u_question}</p>
-                    <button type="details" variant="contained" color="primary" onClick={{handleView}}>View in detail</button>
+                    <button type="details" variant="contained" color="primary" onClick={() => nav('/details')}>
+                        View in detail
+                    </button>
                 {/* </Container> */}
                 </div>
             ))}

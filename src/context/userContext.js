@@ -1,5 +1,6 @@
 import { createContext, useContext, useState, useEffect } from "react";
-import {signInWithEmailAndPassword,createUserWithEmailAndPassword,onAuthStateChanged,signOut,updateProfile,sendPasswordResetEmail} from "firebase/auth";
+import {signInWithEmailAndPassword,createUserWithEmailAndPassword,onAuthStateChanged
+        ,signOut,updateProfile,sendPasswordResetEmail} from "firebase/auth";
 import { auth } from "../firebase";
 
 export const UserContext = createContext({});
@@ -63,7 +64,7 @@ export const UserContextProvider = ({ children }) => {
       .then((res) => console.log(res))
       .catch((err) => setError(err.code))
       .finally(() => setLoading(false));
-  }
+  };
 
   const contextValue = {
     user,
@@ -72,7 +73,7 @@ export const UserContextProvider = ({ children }) => {
     signInUser,
     registerUser,
     logoutUser,
-    forgotPassword
+    forgotPassword,
   };
   return (
     <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>

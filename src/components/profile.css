@@ -50,7 +50,7 @@ img{
     border-radius: 6px;
 }
 button:hover{
-    background-image: linear-gradient(to left, blue, olive);
+    /* background-image: linear-gradient(to left, blue, olive); */
     border: none;
     color: white;
 }
