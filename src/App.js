@@ -9,6 +9,7 @@ import PostsT from "./components/PostsT";
 import AllPostsT  from "./components/AllPostsT";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom" ;
 import UsersT from "./components/UsersT";
+import MyPostsT from "./components/MyPostsT";
 ///////Thabelo:
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path="/profile" element={<Profile/>}></Route>
        
        <Route path="/allusers" element={<UsersT/>}/>
+       <Route path="/myposts" element={<MyPostsT/>}/> 
       </Routes>
       </Router>
     {/* Thabelo */}
