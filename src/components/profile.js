@@ -9,6 +9,9 @@ import { UserContext } from "../context/userContext";
 import { useEffect, useState } from 'react';
 import {getAuth , onAuthStateChanged} from "firebase/auth" ;
 import { app } from '../firebase/index' ;
+
+const auth = getAuth(app) ;
+
 //////////Thabelo:
 
 const Profile = () => {
