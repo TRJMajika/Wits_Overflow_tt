@@ -70,7 +70,7 @@ const Signup = () => {
       <input placeholder="Email" type="email"  onChange={(event) => setEmail(event.target.value)}/>
       <input placeholder="Password" type="password"  onChange={(event) => setPassword(event.target.value)} />
       <input placeholder="Confirm Password" type="password" onChange={(event) => setConfirmPassword(event.target.value)} />
-      <button type="submit" onClick={() => handleSubmit({firstnameRef, lastnameRef, studentNumRef, emailRef, usernameRef, passwordRef,  u_id: uuidv4()})}>Register</button>
+      <button type="submit" onClick={() => handleSubmit({firstnameRef, lastnameRef, studentNumRef, emailRef, usernameRef, passwordRef,  u_created: new Date(),  u_id: uuidv4()})}>Register</button>
       {/* <a href="/">Already have an account?</a> */}
     </form>
   </div>
