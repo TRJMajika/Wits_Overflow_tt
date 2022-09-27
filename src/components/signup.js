@@ -92,14 +92,23 @@ const Signup = () => {
   <div className="form">
     <h2> Sign Up</h2>
     <form >
-      <input placeholder="First Name" type="first" onChange={(event) => setFirstName(event.target.value)} />
-      <input placeholder="Last Name" type="last" onChange={(event) => setLastName(event.target.value)} /> 
-      <input placeholder="User Name" type="username" onChange={(event) => setUsername(event.target.value)} />
-      <input placeholder="Student Number" type="stunum" onChange={(event) => setStudentNum(event.target.value)} />
-      <input placeholder="Email" type="email"  onChange={(event) => setEmail(event.target.value)}/>
-      <input placeholder="Password" type="password"  onChange={(event) => setPassword(event.target.value)} />
-      <input placeholder="Confirm Password" type="password" onChange={(event) => setConfirmPassword(event.target.value)} />
-      <button type="submit" onClick={() => handleSubmit({firstnameRef, lastnameRef, studentNumRef, emailRef, usernameRef, passwordRef,  u_created: new Date(),  u_id: uuidv4()})}>Register</button>
+       <input placeholder="First Name - Three or more letters" type="first" onChange={(event) => setFirstName(event.target.value)} />
+      <input placeholder="Last Name - Three or more letters" type="last" onChange={(event) => setLastName(event.target.value)} /> 
+      <input placeholder="User Name - Three or more letters" type="username" onChange={(event) => setUsername(event.target.value)} />
+      <input placeholder="Student Number - Seven Digits" type="stunum" onChange={(event) => setStudentNum(event.target.value)} />
+      <input placeholder="Email - STUDENTNUMBER@students.wits.ac.za" type="email"  onChange={(event) => setEmail(event.target.value)}/>
+      <input placeholder="Password - Six or more letters" type="password"  onChange={(event) => setPassword(event.target.value)} />
+      <input placeholder="Confirm Password Six or more letters" type="password" onChange={(event) => setConfirmPassword(event.target.value)} />
+      <button type="submit" onClick={() => handleSubmit({firstnameRef, lastnameRef, studentNumRef, emailRef, usernameRef, passwordRef, u_created: new Date(),  u_id: uuidv4()})}>Register</button>       
+   
+//       <input placeholder="First Name" type="first" onChange={(event) => setFirstName(event.target.value)} />
+//       <input placeholder="Last Name" type="last" onChange={(event) => setLastName(event.target.value)} /> 
+//       <input placeholder="User Name" type="username" onChange={(event) => setUsername(event.target.value)} />
+//       <input placeholder="Student Number" type="stunum" onChange={(event) => setStudentNum(event.target.value)} />
+//       <input placeholder="Email" type="email"  onChange={(event) => setEmail(event.target.value)}/>
+//       <input placeholder="Password" type="password"  onChange={(event) => setPassword(event.target.value)} />
+//       <input placeholder="Confirm Password" type="password" onChange={(event) => setConfirmPassword(event.target.value)} />
+//       <button type="submit" onClick={() => handleSubmit({firstnameRef, lastnameRef, studentNumRef, emailRef, usernameRef, passwordRef,  u_created: new Date(),  u_id: uuidv4()})}>Register</button>
       {/* <a href="/">Already have an account?</a> */}
     </form>
   </div>
