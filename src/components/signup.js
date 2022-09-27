@@ -42,18 +42,47 @@ const Signup = () => {
 
   // const nav = useNavigate();
 
-  function handleSubmit(datapoint){
-    if (emailRef && passwordRef && usernameRef && passwordRef === confirmPassRef){
+//   function handleSubmit(datapoint){
+//     if (emailRef && passwordRef && usernameRef && passwordRef === confirmPassRef){
 
-      registerUser(emailRef, passwordRef, usernameRef);
+//       registerUser(emailRef, passwordRef, usernameRef);
 
-      ref.doc(datapoint.id)
-      ref.add(datapoint)
-      alert("Registered.")
+//       ref.doc(datapoint.id)
+//       ref.add(datapoint)
+//       alert("Registered.")
 
+//       // nav('/dashboard');
+
+//     } 
+  
+//   }
+  
+   function handleSubmit(datapoint){
+   // if (emailRef && passwordRef && usernameRef && passwordRef){
+       if(firstnameRef.length < 3){
+        alert(`Name to short`) ;
+       }else if(lastnameRef.length <3){
+        alert(`Surname to short`)
+       }else if(usernameRef.length <3){
+        alert(`Surname to short`)
+       }else if(studentNumRef.length < 7){
+        alert(`Student Number should be seven digits`)
+       }else if(emailRef !== `${studentNumRef}@students.wits.ac.za`){
+        alert(`Email should be STUDENTNUMBER.students.wits.ac.za`)
+       }else if(passwordRef < 6 && passwordRef !== confirmPassRef){
+        alert(`Either your password is short or it doesnt match your confirm password`) 
+       }else{
+        registerUser(emailRef, passwordRef, usernameRef);
+        ref.doc(datapoint.id)
+        ref.add(datapoint)
+        alert("Registered.")
+
+       }
+
+     
+      
       // nav('/dashboard');
-
-    } 
+   
   
   }
 ///////Thabelo and Bongiwe
